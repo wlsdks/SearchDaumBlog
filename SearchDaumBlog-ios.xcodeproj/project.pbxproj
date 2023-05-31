@@ -19,6 +19,7 @@
 		EC5CC71A2A278B4400D88DF8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EC5CC7192A278B4400D88DF8 /* Kingfisher */; };
 		EC5CC71D2A278B5200D88DF8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC5CC71C2A278B5200D88DF8 /* SnapKit */; };
 		EC5CC71F2A278B9F00D88DF8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC71E2A278B9F00D88DF8 /* MainViewController.swift */; };
+		EC5CC7212A278CAB00D88DF8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC7202A278CAB00D88DF8 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		EC5CC7092A278A1100D88DF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC5CC70B2A278A1100D88DF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC5CC71E2A278B9F00D88DF8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EC5CC7202A278CAB00D88DF8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				EC5CC7062A278A1100D88DF8 /* Assets.xcassets */,
 				EC5CC7082A278A1100D88DF8 /* LaunchScreen.storyboard */,
 				EC5CC70B2A278A1100D88DF8 /* Info.plist */,
+				EC5CC7202A278CAB00D88DF8 /* SearchBar.swift */,
 			);
 			path = "SearchDaumBlog-ios";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				EC5CC7022A278A1100D88DF8 /* ViewController.swift in Sources */,
 				EC5CC6FE2A278A1100D88DF8 /* AppDelegate.swift in Sources */,
+				EC5CC7212A278CAB00D88DF8 /* SearchBar.swift in Sources */,
 				EC5CC7002A278A1100D88DF8 /* SceneDelegate.swift in Sources */,
 				EC5CC71F2A278B9F00D88DF8 /* MainViewController.swift in Sources */,
 			);

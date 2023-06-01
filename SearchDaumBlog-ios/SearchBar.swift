@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 final class SearchBar: UISearchBar {
     let disposeBag = DisposeBag()
@@ -45,14 +46,32 @@ final class SearchBar: UISearchBar {
             .asSignal()
             .emit(to: self.rx.endEditing) // emit()으로 연결한다. 그럼 키보드가 내려가는게 동작한다.
             .disposed(by: disposeBag)
+        
+        self.shouldLoadResult = searchButtonTapped // 검색버튼 클릭이 트리거
+            .withLatestFrom(self.rx.text) { $1 ?? "" } // 텍스트가 선택
+            .filter { !$0.isEmpty } // 빈값없도록 하기
+            .distinctUntilChanged() // 중복제거
+            
     }
     
     private func attribute() {
-        
+        searchButton.setTitle("검색", for: .normal)
+        searchButton.setTitleColor(.systemBlue, for: .normal)
     }
     
     private func layout() {
+        addSubview(searchButton)
         
+        searchTextField.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(12)
+            $0.trailing.equalTo(searchButton.snp.leading).offset(-12)
+            $0.centerY.equalToSuperview()
+        }
+        
+        searchButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(12)
+        }
     }
 }
 

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		EC14310D2A28CA6600203C97 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14310C2A28CA6600203C97 /* FilterView.swift */; };
+		EC14310F2A28CBFF00203C97 /* BlogList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14310E2A28CBFF00203C97 /* BlogList.swift */; };
+		EC1431112A28CC0700203C97 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1431102A28CC0700203C97 /* BlogListCell.swift */; };
+		EC1431132A28CC1400203C97 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1431122A28CC1400203C97 /* BlogListCellData.swift */; };
+		EC14311C2A28D13F00203C97 /* AlertActionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC14311B2A28D13F00203C97 /* AlertActionConvertible.swift */; };
 		EC5CC6FE2A278A1100D88DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC6FD2A278A1100D88DF8 /* AppDelegate.swift */; };
 		EC5CC7002A278A1100D88DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC6FF2A278A1100D88DF8 /* SceneDelegate.swift */; };
 		EC5CC7022A278A1100D88DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC5CC7012A278A1100D88DF8 /* ViewController.swift */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		EC14310C2A28CA6600203C97 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		EC14310E2A28CBFF00203C97 /* BlogList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogList.swift; sourceTree = "<group>"; };
+		EC1431102A28CC0700203C97 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
+		EC1431122A28CC1400203C97 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
+		EC14311B2A28D13F00203C97 /* AlertActionConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertible.swift; sourceTree = "<group>"; };
 		EC5CC6FA2A278A1100D88DF8 /* SearchDaumBlog-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SearchDaumBlog-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC5CC6FD2A278A1100D88DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC5CC6FF2A278A1100D88DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +59,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1431142A28CC3700203C97 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EC1431162A28D02300203C97 /* MainViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EC1431152A28CC4400203C97 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				EC1431122A28CC1400203C97 /* BlogListCellData.swift */,
+				EC14311B2A28D13F00203C97 /* AlertActionConvertible.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		EC1431162A28D02300203C97 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC5CC71E2A278B9F00D88DF8 /* MainViewController.swift */,
+				EC1431172A28D03600203C97 /* SubComponents */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		EC1431172A28D03600203C97 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EC1431182A28D05600203C97 /* SearchBar */,
+				EC1431192A28D05E00203C97 /* BlogListView */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
+		EC1431182A28D05600203C97 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				EC5CC7202A278CAB00D88DF8 /* SearchBar.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		EC1431192A28D05E00203C97 /* BlogListView */ = {
+			isa = PBXGroup;
+			children = (
+				EC14311A2A28D07700203C97 /* SubComponents */,
+				EC14310E2A28CBFF00203C97 /* BlogList.swift */,
+			);
+			path = BlogListView;
+			sourceTree = "<group>";
+		};
+		EC14311A2A28D07700203C97 /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EC14310C2A28CA6600203C97 /* FilterView.swift */,
+				EC1431102A28CC0700203C97 /* BlogListCell.swift */,
+			);
+			path = SubComponents;
+			sourceTree = "<group>";
+		};
 		EC5CC6F12A278A1100D88DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -73,12 +142,11 @@
 				EC5CC6FD2A278A1100D88DF8 /* AppDelegate.swift */,
 				EC5CC6FF2A278A1100D88DF8 /* SceneDelegate.swift */,
 				EC5CC7012A278A1100D88DF8 /* ViewController.swift */,
-				EC5CC71E2A278B9F00D88DF8 /* MainViewController.swift */,
-				EC14310C2A28CA6600203C97 /* FilterView.swift */,
+				EC1431142A28CC3700203C97 /* Presentation */,
+				EC1431152A28CC4400203C97 /* Entities */,
 				EC5CC7062A278A1100D88DF8 /* Assets.xcassets */,
 				EC5CC7082A278A1100D88DF8 /* LaunchScreen.storyboard */,
 				EC5CC70B2A278A1100D88DF8 /* Info.plist */,
-				EC5CC7202A278CAB00D88DF8 /* SearchBar.swift */,
 			);
 			path = "SearchDaumBlog-ios";
 			sourceTree = "<group>";
@@ -166,10 +234,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC5CC7022A278A1100D88DF8 /* ViewController.swift in Sources */,
+				EC14310F2A28CBFF00203C97 /* BlogList.swift in Sources */,
+				EC14311C2A28D13F00203C97 /* AlertActionConvertible.swift in Sources */,
 				EC5CC6FE2A278A1100D88DF8 /* AppDelegate.swift in Sources */,
 				EC5CC7212A278CAB00D88DF8 /* SearchBar.swift in Sources */,
 				EC5CC7002A278A1100D88DF8 /* SceneDelegate.swift in Sources */,
+				EC1431112A28CC0700203C97 /* BlogListCell.swift in Sources */,
 				EC14310D2A28CA6600203C97 /* FilterView.swift in Sources */,
+				EC1431132A28CC1400203C97 /* BlogListCellData.swift in Sources */,
 				EC5CC71F2A278B9F00D88DF8 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

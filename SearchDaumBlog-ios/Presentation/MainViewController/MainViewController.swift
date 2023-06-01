@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     let searchBar = SearchBar()
     let listView = BlogListView()
     
+    let alertActionTapped = PublishRelay<AlertAction>()
+    
     // MARK: - 생성자
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -30,7 +32,18 @@ class MainViewController: UIViewController {
     
     // MARK: - 바인딩 작업을 해주는 함수
     private func bind() {
+        let alertSheetForSorting = listView.headerView.sortButtonTapped
+            .map { _ -> Alert in
+                return (title: nil, message: nil, actions: [.title, .datetime, .cancel], style: .actionSheet)
+            }
         
+        alertSheetForSorting.asSignal(onErrorSignalWith: .empty())
+            .flatMapLatest { alert -> Signal<AlertAction> in
+                let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
+                return self.presentAlertController(alertController, actions: alert.actions)
+            }
+            .emit(to: alertActionTapped)
+            .disposed(by: disposeBag)
     }
     
     // MARK: - 뷰를 꾸미는 attribution코드를 모아놓은 함수
